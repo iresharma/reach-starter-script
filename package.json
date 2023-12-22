@@ -1,0 +1,16 @@
+{
+  "name": "reach-starter-script",
+  "version": "1.0.0",
+  "description": "A script to setup and run reach.io given all services are installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iresharma",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0",
+    "multiselect-prompt": "^0.3.2"
+  }
+}
