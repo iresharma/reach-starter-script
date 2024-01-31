@@ -68,7 +68,7 @@ const handleRunner = (e) => {
         case 'pageAnalytics':
             exec(`
                 osascript -e 'tell app "Terminal"
-                    do script "cd /Users/iresharma/Documents/reach-page-analytics && source venv/bin/activate && source .env && python3 main.py "
+                    do script "cd /Users/iresharma/Documents/reach-page-analytics && source .venv/bin/activate && source .env && python3 main.py "
                 end tell'
             `)
             break
