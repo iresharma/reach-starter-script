@@ -23,6 +23,7 @@ const colors = [
     {title: 'Page Analytics', value: 'pageAnalytics'},
     {title: 'Mail Template', value: 'templates'},
     {title: 'Landing', value: 'landing'},
+    {title: 'Storage server', value: 'storage'},
 ]
 
 const selected = (items) => items
@@ -68,7 +69,7 @@ const handleRunner = (e) => {
         case 'pageAnalytics':
             exec(`
                 osascript -e 'tell app "Terminal"
-                    do script "cd /Users/iresharma/Documents/reach-page-analytics && source .venv/bin/activate && source .env && python3 main.py "
+                    do script "cd /Users/iresharma/Documents/reach-page-analytics && source .venv/bin/activate && source .env && python3 app.py "
                 end tell'
             `)
             break
@@ -90,6 +91,13 @@ const handleRunner = (e) => {
             exec(`
                 osascript -e 'tell app "Terminal"
                     do script "cd /Users/iresharma/Documents/reach-io/temp-landing && bun dev"
+                end tell'
+            `)
+            break
+        case 'storage':
+            exec(`
+                osascript -e 'tell app "Terminal"
+                    do script "cd /Users/iresharma/Documents/reach-file-server && source venv/bin/activate && source .env && python3 main.py"
                 end tell'
             `)
             break
