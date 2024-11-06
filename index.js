@@ -5,7 +5,7 @@ const prompt = require('multiselect-prompt')
 
 let logo = "";
 
-figlet("Reach.io", (err, data) => {
+figlet("Reach Systems", (err, data) => {
     if (err) {
         console.log(err)
     }
@@ -20,10 +20,10 @@ const colors = [
     {title: 'Kanban', value: 'kanban'},
     {title: 'Page', value: 'page'},
     {title: 'Page server', value: 'pageServer'},
+    {title: 'Storage server', value: 'storage'},
     {title: 'Page Analytics', value: 'pageAnalytics'},
     {title: 'Mail Template', value: 'templates'},
     {title: 'Landing', value: 'landing'},
-    {title: 'Storage server', value: 'storage'},
 ]
 
 const selected = (items) => items
@@ -97,7 +97,7 @@ const handleRunner = (e) => {
         case 'storage':
             exec(`
                 osascript -e 'tell app "Terminal"
-                    do script "cd /Users/iresharma/Documents/reach-file-server && source venv/bin/activate && source .env && python3 main.py"
+                    do script "cd /Users/iresharma/Documents/reach-file-server && source .venv/bin/activate && source .env && python3 app.py"
                 end tell'
             `)
             break
