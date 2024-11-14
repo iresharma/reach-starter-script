@@ -22,8 +22,9 @@ const colors = [
     {title: 'Page server', value: 'pageServer'},
     {title: 'Storage server', value: 'storage'},
     {title: 'Page Analytics', value: 'pageAnalytics'},
-    {title: 'Mail Template', value: 'templates'},
     {title: 'Landing', value: 'landing'},
+    {title: 'Mailing Server', value: 'mailing'}
+    {title: 'Mail Template', value: 'templates'},
 ]
 
 const selected = (items) => items
@@ -56,6 +57,13 @@ const handleRunner = (e) => {
             exec(`
                 osascript -e 'tell app "Terminal"
                     do script "cd /Users/iresharma/Documents/pythonProject && source venv/bin/activate && source .env && python3 main.py"
+                end tell'
+            `)
+            break
+        case 'mailing':
+            exec(`
+                osascript -e 'tell app "Terminal"
+                    do script "cd /Users/iresharma/Documents/flaskProject && source venv/bin/activate && source .env && python3 app.py"
                 end tell'
             `)
             break
