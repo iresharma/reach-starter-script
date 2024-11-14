@@ -23,7 +23,7 @@ const colors = [
     {title: 'Storage server', value: 'storage'},
     {title: 'Page Analytics', value: 'pageAnalytics'},
     {title: 'Landing', value: 'landing'},
-    {title: 'Mailing Server', value: 'mailing'}
+    {title: 'Mailing Server', value: 'mailing'},
     {title: 'Mail Template', value: 'templates'},
 ]
 
